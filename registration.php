@@ -8,7 +8,7 @@ use \Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(ComponentRegistrar::MODULE, 'FishPig_WordPress', __DIR__);
 
-if (!function_exists('__')) {
+if (!function_exists('__') && defined('BP')) {
 	$bootstrap    = BP . '/app/bootstrap.php';
 	$canIncludeFpFunctions = true;
 	
